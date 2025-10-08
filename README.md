@@ -66,13 +66,38 @@ MODEL GRAPH:
 
 Program
 
+Am=4.8;
+Ac=9.6;
+fm=374;
+fc=3740;
+fs=37400;
+t=0:1/fs:3/fm;
+
+m=Am*cos(2*3.14*fm*t);
+subplot(3,1,1);
+plot(t,m);
+title('Message signal');
+
+c=Ac*cos(2*3.14*fc*t);
+subplot(3,1,2);
+plot(t,c);
+title('Carrier signal');
+
+efm= Ac*cos((2*3.14*fc*t)+4*sin(2*3.14*fm*t));
+subplot(3,1,3);
+plot(t,efm);
+title('Frequency modulated signal');
 
 Output Waveform
+
+
+<img width="757" height="669" alt="Screenshot 2025-10-08 083851" src="https://github.com/user-attachments/assets/7b133d27-47b6-4f6d-9fae-f467e36a97d0" />
 
 
 
 Tabulation
 
+![WhatsApp Image 2025-10-04 at 20 33 33_c645b874](https://github.com/user-attachments/assets/1b363812-7d77-4f5a-935d-edd41bba59e5)
 
 
 Calculation
